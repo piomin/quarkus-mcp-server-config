@@ -1,0 +1,19 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: quarkus-mcp-server
+  labels:
+    app: quarkus-mcp-server
+    app.kubernetes.io/component: quarkus-mcp-server
+    app.kubernetes.io/instance: quarkus-mcp-server
+    backstage.io/kubernetes-id: quarkus-mcp-server
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  to:
+    kind: Service
+    name: quarkus-mcp-server
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
