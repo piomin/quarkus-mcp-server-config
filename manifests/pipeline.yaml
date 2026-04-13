@@ -10,10 +10,6 @@ spec:
       name: git-revision
       type: string
       default: master
-  results:
-    - description: The common vulnerabilities and exposures (CVE) result
-      name: SCAN_OUTPUT
-      value: $(tasks.vulnerability-scan.results.SCAN_OUTPUT)
   tasks:
     - name: git-clone
       params:
