@@ -48,7 +48,7 @@ spec:
         - name: TLSVERIFY
           value: 'false'
         - name: IMAGE
-          value: quay.io/demo/quarkus-mcp-server:$(tasks.get-version.results.version)
+          value: quay.io/pminkows/quarkus-mcp-server:$(tasks.get-version.results.version)
       runAfter:
         - get-version
       taskRef:
