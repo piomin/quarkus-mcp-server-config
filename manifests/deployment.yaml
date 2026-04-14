@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: quarkus-mcp-server
-          image: quay.io/demo/quarkus-mcp-server:1.0
+          image: quay.io/pminkows/quarkus-mcp-server:1.0
           ports:
             - containerPort: 8080
               name: http
